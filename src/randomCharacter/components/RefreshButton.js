@@ -1,5 +1,6 @@
 import {useContext} from "react";
 import {RandomCharacterCtx} from "../context";
+import "./randomCharacter.css"
 
 export function RefreshButton() {
   const { state, dispatch } = useContext(RandomCharacterCtx);
