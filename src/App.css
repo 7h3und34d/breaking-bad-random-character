@@ -1,0 +1,12 @@
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app-title {
+    border-bottom: #369457 0.3rem solid;
+}
