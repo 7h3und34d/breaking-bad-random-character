@@ -4,3 +4,12 @@
     justify-content: center;
     align-items: center;
 }
+
+.primary-action {
+    border: 0;
+    padding: 1rem;
+    width: 17rem;
+    background-color: #369457;
+    color: #fff;
+    font-size: 1.2rem;
+}
