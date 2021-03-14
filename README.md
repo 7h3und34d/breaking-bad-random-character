@@ -37,7 +37,7 @@ npm start
 
 ## Demo
 
-You can play with it [here](Settings for random-breaking-bad-characters-bzdv21)
+You can play with it [here](https://random-breaking-bad-characters-bzdv21.netlify.app/)
 
 
 ## Misc
