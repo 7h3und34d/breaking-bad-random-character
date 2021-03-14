@@ -40,6 +40,7 @@ npm start
 You can play with it [here](Settings for random-breaking-bad-characters-bzdv21)
 
 
-## Misc
+## Credits
 
 Follow me on Twitter [@bzdv21](https://twitter.com/bzdv21)
+Breaking bad icon from [Iconscout](https://iconscout.com/icons/breaking-bad)
