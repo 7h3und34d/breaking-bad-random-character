@@ -1,5 +1,5 @@
 import { getRandomCharacter } from "./api";
-import {useReducer, useEffect, useCallback } from "react";
+import { useReducer, useEffect, useCallback } from "react";
 
 const initialRandomCharacterState = {
   status: "init",
@@ -8,7 +8,7 @@ const initialRandomCharacterState = {
 };
 
 function randomCharacterReducer(state, action) {
-  switch(action.type) {
+  switch (action.type) {
     case "FETCH":
       return {
         ...state,
@@ -25,14 +25,17 @@ function randomCharacterReducer(state, action) {
         ...state,
         status: "error",
         error: action.payload,
-      }
+      };
     default:
       return state;
   }
 }
 
 export function useRandomCharacter() {
-  const [state, dispatch] = useReducer(randomCharacterReducer, initialRandomCharacterState);
+  const [state, dispatch] = useReducer(
+    randomCharacterReducer,
+    initialRandomCharacterState
+  );
   const retrieve = useCallback(() => {
     fetchCharacter(dispatch)();
   }, [dispatch]);
@@ -43,14 +46,18 @@ export function useRandomCharacter() {
     }
   }, [state.status, retrieve]);
 
-  return {state, dispatch};
+  return { state, dispatch };
 }
 
 export function fetchCharacter(dispatch) {
-  return function() {
+  return function () {
     dispatch({ type: "FETCH" });
     getRandomCharacter()
-      .then(resp => { dispatch({type: "DONE", payload: resp[0] }) })
-      .catch(err => { dispatch({ type: "ERROR", payload: err }) });
-  }
+      .then((resp) => {
+        dispatch({ type: "DONE", payload: resp[0] });
+      })
+      .catch((err) => {
+        dispatch({ type: "ERROR", payload: err });
+      });
+  };
 }
