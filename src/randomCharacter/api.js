@@ -1,8 +1,7 @@
-import fetch from 'node-fetch';
+import fetch from "node-fetch";
 
-
-const URL = 'https://www.breakingbadapi.com/api';
+const URL = "https://www.breakingbadapi.com/api";
 
 export async function getRandomCharacter() {
-  return fetch(`${URL}/character/random`).then(resp => resp.json())
+  return fetch(`${URL}/character/random`).then((resp) => resp.json());
 }
