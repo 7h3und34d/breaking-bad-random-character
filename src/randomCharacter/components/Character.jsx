@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useRandomCharacterContext } from "../context";
 import "./style.css";
+import spinner from "./three-dots.svg";
 
 export function Character() {
   const { state, dispatch } = useRandomCharacterContext();
@@ -22,8 +23,13 @@ export function Character() {
               backgroundColor: "#fff",
               width: "200px",
               height: "300px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          />
+          >
+            <img src={spinner} alt="spinner" />
+          </div>
           {state.status === "loading" ? <h3>Loading data...</h3> : null}
           {state.status === "init" ? <h3>Initializing application</h3> : null}
         </>
@@ -35,6 +41,7 @@ export function Character() {
             aria-label={`image of ${state.character.name}`}
             style={{
               backgroundImage: `url("${state.character.img}")`,
+              backgroundColor: "#369457 ",
               backgroundPosition: "center",
               backgroundSize: "cover",
               width: "200px",
