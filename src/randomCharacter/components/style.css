@@ -16,6 +16,6 @@
 }
 
 .primary-action:disabled {
-  background-color: #1F6032;
+  background-color: #1f6032;
   cursor: not-allowed;
 }

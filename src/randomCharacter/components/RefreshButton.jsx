@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { RandomCharacterCtx } from "../context";
-import "./randomCharacter.css";
+import { useRandomCharacterContext } from "../context";
+import "./style.css";
 
 export function RefreshButton() {
-  const { state, dispatch } = useContext(RandomCharacterCtx);
+  const { state, dispatch } = useRandomCharacterContext();
 
   const onClick = () => {
     dispatch({ type: "FETCH" });
