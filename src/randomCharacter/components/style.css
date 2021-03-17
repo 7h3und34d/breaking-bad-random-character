@@ -5,17 +5,22 @@
   align-items: center;
 }
 
+.character > h2 {
+  font-size: 1.2rem;
+}
+
 .primary-action {
   border: 0;
   padding: 1rem;
   width: 17rem;
-  background-color: #369457;
-  color: #fff;
+  background-color: #3ca962;
+  color: #000;
   font-size: 1.2rem;
   cursor: pointer;
 }
 
 .primary-action:disabled {
   background-color: #1f6032;
+  color: #fff;
   cursor: not-allowed;
 }
