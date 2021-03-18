@@ -17,9 +17,10 @@ export const Character = Konnekt(() => {
   const { state, dispatch } = useRandomCharacterContext();
 
   useEffect(() => {
-    setTimeout(() => {
+    let tid = setTimeout(() => {
       dispatch({ type: "FETCH" });
-    }, 2000);
+    }, 860);
+    return () => clearTimeout(tid);
   }, [dispatch]);
 
   if (["idle", "error"].includes(state.status)) {
@@ -49,8 +50,7 @@ export const Character = Konnekt(() => {
         : "Initializing application",
     ImageComponent: () => (
       <div
-        role="img"
-        aria-label="breaking bad logo"
+        role="article"
         style={{
           backgroundColor: "#fff",
           width: "200px",
